@@ -1,5 +1,4 @@
-
-library den.src.cli;
+library pen.src.cli;
 
 import 'package:unscripted/unscripted.dart';
 
@@ -10,17 +9,17 @@ import 'commands/pull.dart';
 import 'commands/spec.dart';
 import 'commands/uninstall.dart';
 
-class Den extends Object with
-    BumpCommand,
-    FetchCommand,
-    InstallCommand,
-    PullCommand,
-    SpecCommand,
-    UninstallCommand {
-
+class Pen extends Object
+    with
+        BumpCommand,
+        FetchCommand,
+        InstallCommand,
+        PullCommand,
+        SpecCommand,
+        UninstallCommand {
   @Command(
       allowTrailingOptions: true,
       help: 'A pubspec authoring tool',
       plugins: const [const Completion()])
-  Den();
+  Pen();
 }

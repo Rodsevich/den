@@ -1,5 +1,5 @@
 
-library den.src.git;
+library pen.src.git;
 
 import 'dart:async';
 import 'dart:io';
@@ -7,7 +7,7 @@ import 'dart:io';
 import 'package:pub_semver/pub_semver.dart';
 
 // TODO: Don't depend on private code.
-import 'package:den_api/src/git.dart';
+import 'package:pen_api/src/git.dart';
 
 const String _versionTemplate = 'v{v}';
 

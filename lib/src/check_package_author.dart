@@ -1,5 +1,5 @@
 
-library den.src.check_package_author;
+library pen.src.check_package_author;
 
 List<String> checkAuthor(String author) {
   var hasName = new RegExp(r"^ *[^<]");

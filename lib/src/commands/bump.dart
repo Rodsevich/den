@@ -1,9 +1,9 @@
 
-library den.src.commands.bump;
+library pen.src.commands.bump;
 
-import 'package:den_api/den_api.dart';
+import 'package:pen_api/pen_api.dart';
 // TODO: Don't depend on private code.
-import 'package:den_api/src/util.dart';
+import 'package:pen_api/src/util.dart';
 import 'package:path/path.dart' as p;
 import 'package:pub_semver/pub_semver.dart';
 import 'package:unscripted/unscripted.dart';

@@ -1,5 +1,5 @@
 
-library den.src.yaml_highlighter;
+library pen.src.yaml_highlighter;
 
 import 'package:yaml/yaml.dart';
 

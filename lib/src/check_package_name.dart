@@ -2,7 +2,7 @@
 // TODO: This code was copied with minor changes from:
 //   https://code.google.com/p/dart/source/browse/branches/bleeding_edge/dart/sdk/lib/_internal/pub/lib/src/validator/name.dart
 // Reuse that if it gets released via https://dartbug.com/21169.
-library den.src.check_package_name;
+library pen.src.check_package_name;
 
 List checkPackageName(String name) {
   var description = 'Package name "$name"';

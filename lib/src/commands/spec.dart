@@ -1,12 +1,12 @@
-library den.src.commands.spec;
+library pen.src.commands.spec;
 
 import 'dart:async';
 import 'dart:mirrors';
 import 'dart:io';
 
-import 'package:den_api/den_api.dart';
+import 'package:pen_api/pen_api.dart';
 // TODO: Don't depend on private code.
-import 'package:den_api/src/util.dart';
+import 'package:pen_api/src/util.dart';
 import 'package:unscripted/unscripted.dart';
 import 'package:prompt/prompt.dart';
 import 'package:pub_semver/pub_semver.dart';
@@ -40,7 +40,7 @@ existing field values instead.''')
           var negation = shouldSave ? '' : ' ${theme.warning('not')}';
           var sendOff = "\nPubspec$negation ${action}d.";
           if (shouldSave && !exists) {
-            sendOff += '  You can now add dependencies to it with `den install`.';
+            sendOff += '  You can now add dependencies to it with `pen install`.';
           }
           print(sendOff);
         }

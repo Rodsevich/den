@@ -1,7 +1,3 @@
-# 0.1.5
+# 0.1.7
 
-* Added `den spec` command.
-
-# 0.1.3
-
-* Added `den bump` command.
+* Forked

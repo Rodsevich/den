@@ -1,4 +1,4 @@
 
-library den.test;
+library pen.test;
 
 main() {}
