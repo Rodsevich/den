@@ -1,8 +1,8 @@
 author: "Nico Rodsevich <nicorodsevich@gmail.com>"
-description: "A pubspec authoring tool. (forked from pen)"
+description: "A pubspec authoring tool. (forked from den)"
 homepage: "https://github.com/Rodsevich/pen"
 name: "pen"
-version: "0.1.8"
+version: "0.1.9"
 dependencies:
   ansicolor: ^0.0.9
   contrast: ">=0.1.1 <0.2.0"

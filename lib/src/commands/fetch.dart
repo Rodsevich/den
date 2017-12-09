@@ -1,4 +1,3 @@
-
 library pen.src.commands.fetch;
 
 import 'package:pen_api/pen_api.dart';
@@ -10,25 +9,33 @@ import '../util.dart' as util;
 class FetchCommand {
   @SubCommand(help: 'Show any outdated dependencies')
   fetch(
-      @Rest(
-          valueHelp: 'package name',
-          allowed: util.getHostedDependencyNames,
-          help: 'Name of dependency to fetch.  If omitted, then fetches all dependencies in the pubspec.')
-      Iterable<String> names) => Pubspec.load().then((pubspec) {
-    onInvalid(Iterable<String> invalid) {
-      print('Can only fetch existing hosted dependencies, which do not include: $invalid');
-    }
-    util.fetchOrPull(pubspec, names, (pubspec, name) => pubspec.fetch(name), onInvalid).then((Map<String, VersionStatus> outdated) {
-      if (outdated.isEmpty) {
-        print('\nDependencies are up to date.');
-        return;
-      }
+          @Rest(
+              valueHelp: 'package name',
+              allowed: util.getHostedDependencyNames,
+              help:
+                  'Name of dependency to fetch.  If omitted, then fetches all dependencies in the pubspec.')
+              Iterable<String> names) =>
+      Pubspec.load().then((pubspec) {
+        onInvalid(Iterable<String> invalid) {
+          print(
+              'Can only fetch existing hosted dependencies, which do not include: $invalid');
+        }
 
-      var lines = [];
-      outdated.forEach((name, status) {
-        lines.add('${theme.dependency(name)}${theme.info(' (constraint: ')}${theme.version(status.constraint.toString())}${theme.info(', latest: ')}${theme.version(status.primary.toString())}${theme.info(')')}');
+        util
+            .fetchOrPull(pubspec, names, (pubspec, name) => pubspec.fetch(name),
+                onInvalid)
+            .then((Map<String, VersionStatus> outdated) {
+          if (outdated.isEmpty) {
+            print('\nDependencies are up to date.');
+            return;
+          }
+
+          List<String> lines = [];
+          outdated.forEach((name, status) {
+            lines.add(
+                '${theme.dependency(name)}${theme.info(' (constraint: ')}${theme.version(status.constraint.toString())}${theme.info(', latest: ')}${theme.version(status.primary.toString())}${theme.info(')')}');
+          });
+          print(block('Outdated dependencies', lines));
+        });
       });
-      print(block('Outdated dependencies', lines));
-    });
-  });
 }

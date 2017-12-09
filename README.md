@@ -3,13 +3,13 @@ pen [![pub package](https://img.shields.io/pub/v/pen.svg)](https://pub.dartlang.
 
 A pubspec authoring tool. (forked from den)
 
-##Install
+## Install
 
 ```shell
 pub global activate pen
 ```
 
-##Usage
+## Usage
 
 ```shell
 # `pen ...` requires Dart >=1.7, on 1.6 use `pub global run pen ...`
@@ -62,7 +62,7 @@ pen fetch p[TAB] -> polymer
 pen pull p[TAB] -> polymer
 ```
 
-###Package Authors
+### Package Authors
 
 Add the following package installation instructions to your README:
 
@@ -71,7 +71,7 @@ pub global activate pen
 pen install <your package name>
 ```
 
-##^ Constraints
+## ^ Constraints
 
 `pen install` and `pen pull` will take advantage of [^ constraints][caret_info]
 e.g. `^1.2.3` if either of:
@@ -84,14 +84,14 @@ Otherwise, they will use range syntax e.g. `>=1.2.3 <2.0.0`
 [caret_info]: https://groups.google.com/a/dartlang.org/forum/#!topic/misc/0t9qQF-rZg4
 [sdk_constraint]: https://www.dartlang.org/tools/pub/pubspec.html#sdk-constraints
 
-##Programmatic Usage
+## Programmatic Usage
 
 The underlying functionality is available as a Dart API through the [pen_api][] package,
 which this package is merely a command-line interface for.
 
 [pen_api]: https://github.com/seaneagan/pen_api
 
-##Inspiration
+## Inspiration
 
 `pen install` was inspired by [`npm install --save`][npm install] and [`bower install --save`][bower install]
 `pen fetch` and `pen pull` were inspired by [`david` and `david update`][david].

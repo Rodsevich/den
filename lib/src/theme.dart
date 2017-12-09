@@ -1,4 +1,3 @@
-
 library pen.src.theme;
 
 import 'package:ansicolor/ansicolor.dart';
@@ -15,12 +14,12 @@ class PenTheme {
   final AnsiPen question = new AnsiPen()..white();
   final AnsiPen questionDefault = new AnsiPen()..green(bold: true);
   final AnsiPen yamlKey = new AnsiPen()..green(bold: true);
-  final AnsiPen yamlScalar = new AnsiPen()..blue(bold:true);
+  final AnsiPen yamlScalar = new AnsiPen()..blue(bold: true);
 }
 
 final theme = new PenTheme();
 
-String block(String title, Iterable<String> lines) => '''
+String block(String title, List<String> lines) => '''
 
 ${theme.title(title + ':')}
 
